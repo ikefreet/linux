@@ -16,9 +16,9 @@ for (( i=1; i<255; i++)); do
   ip=172.30.0.$i
   ping -c1 $ip
   if [ $? -eq 0 ]; then
-    $ip >> impossible.txt
+    echo $ip >> impossible.txt
   else
-    $ip >> possible.txt
+    echo $ip >> possible.txt
   fi
 done
 ```
